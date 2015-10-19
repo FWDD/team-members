@@ -1,0 +1,119 @@
+.RivalMind-team .team {
+    display: block;
+    margin: 0 -10px 0 -10px;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.RivalMind-team:after {
+    clear: both;
+}
+
+.RivalMind-team .team > *{
+    vertical-align: top;
+}
+
+.RivalMind-team a{
+    text-decoration: none;
+}
+
+.RivalMind-team .team-name{
+    margin: 20px 0 0;
+}
+
+.RivalMind-team .job-title{
+    display: block;
+}
+.RivalMind-team .team li {
+    display: inline-block;
+    padding: 10px;
+    height: auto;
+}
+
+.RivalMind-team img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.RivalMind-team .team-links{
+    margin:0;
+    padding:0;
+}
+.RivalMind-team .team-links a{
+    position:relative;
+    display: inline-block;
+}
+
+.RivalMind-team .team-links a:before{
+    content: '\f0a3';
+    vertical-align: top;
+    display: inline-block;
+    font: normal normal normal 1em/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.RivalMind-team .team-links a[href*="wordpress.org"]::before,
+.RivalMind-team .team-links a[href*="wordpress.com"]::before {
+    content: '\f19a';
+}
+.RivalMind-team .team-links a[href*="facebook.com"]::before {
+    content: '\f09a';
+}
+.RivalMind-team .team-links a[href*="twitter.com"]::before {
+    content: '\f099';
+}
+.RivalMind-team .team-links a[href*="dribbble.com"]::before {
+    content: '\f17d';
+}
+.RivalMind-team .team-links a[href*="plus.google.com"]::before {
+    content: '\f0d5';
+}
+.RivalMind-team .team-links a[href*="pinterest.com"]::before {
+    content: '\f231';
+}
+.RivalMind-team .team-links a[href*="github.com"]::before {
+    content: '\f113';
+}
+.RivalMind-team .team-links a[href*="tumblr.com"]::before {
+    content: '\f173';
+}
+.RivalMind-team .team-links a[href*="youtube.com"]::before {
+    content: '\f167';
+}
+.RivalMind-team .team-links a[href*="flickr.com"]::before {
+    content: '\f16e';
+}
+.RivalMind-team .team-links a[href*="vimeo.com"]::before {
+    content: '\f27d';
+}
+.RivalMind-team .team-links a[href*="instagram.com"]::before {
+    content: '\f16d';
+}
+.RivalMind-team .team-links a[href*="codepen.io"]::before {
+    content: '\f1cb';
+}
+.RivalMind-team .team-links a[href*="linkedin.com"]::before {
+    content: '\f0e1';
+}
+.RivalMind-team .team-links a[href*="mailto"]::before {
+    content: '\f003';
+}
+
+/*!
+ *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.4.0');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
