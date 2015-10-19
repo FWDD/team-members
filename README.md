@@ -34,4 +34,4 @@ Where $posts_per_page is the number of profiles to show, $cat id the category id
 
 ### Credits
 
-Originally Built by [Devin Price](http://www.wptheming.com/).  The "Dashboard Glancer" class and much re-used code from the Portfolio Post Type plugin by [Gary Jones](http://gamajo.com/).
+Based on the terrific boilerplate by [Devin Price](http://www.wptheming.com/).  The "Dashboard Glancer" class and much re-used code from the Portfolio Post Type plugin by [Gary Jones](http://gamajo.com/).
