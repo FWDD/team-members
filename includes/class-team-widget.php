@@ -43,7 +43,7 @@ class Team_Widget extends WP_Widget {
 	}
 
 	public function form( $instance ) {
-		$instance = wp_parse_args( (array) $instance, array( 'title' => '', 'posts_per_page' => '1', 'category' => 'none', 'team_id' => null ) );
+		$instance = wp_parse_args( (array) $instance, array( 'title' => '', 'posts_per_page' => -1, 'category' => 'none', 'team_id' => null ) );
 		$title = strip_tags( $instance['title'] );
 		$posts_per_page = (int) $instance['posts_per_page'];
 		$category = (int) $instance['category'];
@@ -52,7 +52,7 @@ class Team_Widget extends WP_Widget {
 		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e('Title:', $this->text_domain);?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" /></p>
 
-		<p><label for="<?php echo $this->get_field_id( 'posts_per_page' ); ?>"><?php _e('Number of Profiles:', $this->text_domain);?></label>
+		<p><label for="<?php echo $this->get_field_id( 'posts_per_page' ); ?>"><?php _e('Number of Profiles:(-1 for all)', $this->text_domain);?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'posts_per_page' ); ?>" name="<?php echo $this->get_field_name( 'posts_per_page' ); ?>" type="text" value="<?php echo esc_attr( $posts_per_page ); ?>" />
 		</p>
 

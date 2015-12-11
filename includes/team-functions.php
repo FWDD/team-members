@@ -13,7 +13,7 @@
  * @return  string  Formatted HTML
  */
 if ( ! function_exists( 'get_team' ) ):
-	function get_team( $posts_per_page = - 1, $category = null, $team_id = null ) {
+	function get_team( $posts_per_page = - 1, $category = null, $team_id = null, $excerpt = false ) {
 		$args = array(
 			'posts_per_page' => (int) $posts_per_page,
 			'post_type'      => 'team',
@@ -31,9 +31,9 @@ if ( ! function_exists( 'get_team' ) ):
 		$query = new WP_Query( $args );
 		//TODO Make sure we have an avatar or use the image supplied by the user.
 		$team = '';
+		// Create a counter for the data-target attribute on each team member link
+		$count = 0;
 		if ( $query->have_posts() ) {
-			$count = $query->post_count;
-			//Start our testimonial slider
 			$team .= '<div class="RivalMind-team"><ul class="team">';
 			while ( $query->have_posts() ) : $query->the_post();
 				$post_id = get_the_ID();
@@ -49,9 +49,12 @@ if ( ! function_exists( 'get_team' ) ):
 				if ( ! empty( $meta['profile_facebook'][0] ) ) {
 					$links .= '<li><a href="' . $meta['profile_facebook'][0] . '"><span class="screen-reader-text">Facebook</span></a></li>';
 				}
+				if ( ! empty( $meta['profile_email'][0] ) ) {
+					$links .= '<li><a href="mailto:' . $meta['profile_email'][0] . '"><span class="screen-reader-text">' . $meta['profile_email'][0] . '</span></a></li>';
+				}
 				$image = ! has_post_thumbnail() ? '' : wp_get_attachment_image( get_post_thumbnail_id(), 'thumbnail' );
 
-				$team .= '<li><a href="' . esc_url( get_permalink() ) . '">';
+				$team .= '<li><a href="' . esc_url( get_permalink() ) . '" data-target="' . $count . '">';
 				$team .= '<span class="team-image">' . $image . '</span>';
 				$team .= '<h6 class="team-name">' . get_the_title() . '</h6>';
 				$team .= '<span class="job-title">' . $title . '</span>';
@@ -60,7 +63,8 @@ if ( ! function_exists( 'get_team' ) ):
 					$team .= '<ul class="team-links">' . $links . '</ul>';
 				}
 				$team .= '</li>';
-
+				// Increment data-target counter
+				$count++;
 			endwhile;
 			wp_reset_postdata();
 			$team .= '</ul></div>';
@@ -94,14 +98,14 @@ endif;
 
 if ( ! function_exists( 'team_shortcode' ) ):
 	function team_shortcode( $atts ) {
-		extract( shortcode_atts( array(
+		$a = shortcode_atts( array(
 			'posts_per_page' => -1,
 			'category' => null,
 			'team_id'  => null,
-		), $atts ) );
+		), $atts );
 
-		return get_team($posts_per_page, $category, $team_id);
+		return get_team($a['posts_per_page'], $a['category'], $a['team_id']);
 	}
 endif;
 // TODO should be called on init hook
-add_shortcode( 'RivalMind_team', 'team_shortcode' );
+add_shortcode( 'team', 'team_shortcode' );

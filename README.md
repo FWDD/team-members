@@ -15,18 +15,23 @@ This plugin includes a couple common features that are used with custom post typ
 
 ### Usage
 
-To display the Team Profiles, add the following line of code to your template file:
+To display the Team Profiles, add the following shortcode to your post or page content:
+~~~
+[team]
+~~~
+
+If you're comfortable editing template files, add this line of code to your template file:
 ~~~PHP
-<?php the_team()
+<?php the_team(); ?>
 ~~~
 
 Optionally, you can control the number of profiles to show, what category, or show specific team members.
 
 ~~~PHP
-<?php the_team( $posts_per_page, $cat, $team_id )
+<?php the_team( $posts_per_page, $cat, $team_id ); ?>
 ~~~
 
-Where $posts_per_page is the number of profiles to show, $cat id the category id, and $team_id is an id or array of ids to show. 
+Where $posts_per_page is the number of profiles to show, $cat is the category id, and $team_id is an id or array of ids to show. 
 
 ### Requirements
 

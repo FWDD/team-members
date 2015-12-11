@@ -46,6 +46,7 @@ class Team_Post_Type_Metaboxes {
 		$twitter = ! isset( $meta['profile_twitter'][0] ) ? '' : $meta['profile_twitter'][0];
 		$linkedin = ! isset( $meta['profile_linkedin'][0] ) ? '' : $meta['profile_linkedin'][0];
 		$facebook = ! isset( $meta['profile_facebook'][0] ) ? '' : $meta['profile_facebook'][0];
+		$email = ! isset( $meta['profile_email'][0] ) ? '' : $meta['profile_email'][0];
 
 		wp_nonce_field( basename( __FILE__ ), 'profile_fields' ); ?>
 
@@ -92,6 +93,16 @@ class Team_Post_Type_Metaboxes {
 				</td>
 			</tr>
 
+			<tr>
+				<td class="team_meta_box_td" colspan="2">
+					<label for="profile_facebook"><?php _e( 'Email Address', 'rivalmind-team' ); ?>
+					</label>
+				</td>
+				<td colspan="4">
+					<input type="text" name="profile_email" class="regular-text" value="<?php echo $email; ?>">
+				</td>
+			</tr>
+
 		</table>
 
 	<?php }
@@ -132,6 +143,8 @@ class Team_Post_Type_Metaboxes {
 		$meta['profile_twitter'] = ( isset( $_POST['profile_twitter'] ) ? esc_url( $_POST['profile_twitter'] ) : '' );
 
 		$meta['profile_facebook'] = ( isset( $_POST['profile_facebook'] ) ? esc_url( $_POST['profile_facebook'] ) : '' );
+
+		$meta['profile_email'] = ( isset( $_POST['profile_email'] ) ? esc_textarea( $_POST['profile_email'] ) : '' );
 
 		foreach ( $meta as $key => $value ) {
 			update_post_meta( $post->ID, $key, $value );
