@@ -1,17 +1,17 @@
 <?php
 /**
- * fwdd Team Members
+ * FWDD Team Members
  *
  * @package   Team_Post_Type
  * @license   GPL-2.0+
  *
  * @wordpress-plugin
- * Plugin Name: fwdd Team Members
- * Plugin URI:  https://github.com/fwdd/fwdd-team
+ * Plugin Name: FWDD Team Members
+ * Plugin URI:  https://github.com/FWDD/team-members
  * Description: Adds a custom post type for Team members to your WordPress website.
  * Version:     0.1.0
- * Author:      fwdd
- * Author URI:  https://fwdd.com
+ * Author:      FWDD
+ * Author URI:  https://freelance-web-designer-developer.com/
  * Text Domain: fwdd-team
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -24,12 +24,12 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 // Define the path of this plugin.
-define( 'TEAM__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( 'TEAM_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
 // Required files for registering the post type and taxonomies.
-require_once ( TEAM__PLUGIN_DIR . 'includes/class-team.php');
-require_once ( TEAM__PLUGIN_DIR . 'includes/class-team-registrations.php');
-require_once ( TEAM__PLUGIN_DIR . 'includes/class-team-metaboxes.php');
+require_once ( TEAM_PLUGIN_DIR . 'includes/class-team.php');
+require_once ( TEAM_PLUGIN_DIR . 'includes/class-team-registrations.php');
+require_once ( TEAM_PLUGIN_DIR . 'includes/class-team-metaboxes.php');
 
 // Instantiate registration class, so we can add it as a dependency to main plugin class.
 $post_type_registrations = new FWDD_Team_Post_Type_Registrations;
@@ -56,18 +56,18 @@ if ( is_admin() ) {
 
 	// Loads for users viewing the WordPress dashboard.
 	if ( ! class_exists( 'Gamajo_Dashboard_Glancer' ) ) {
-		require_once (TEAM__PLUGIN_DIR . 'includes/class-gamajo-dashboard-glancer.php');  // WP 3.8
+		require_once (TEAM_PLUGIN_DIR . 'includes/class-gamajo-dashboard-glancer.php');  // WP 3.8
 	}
 
-	require_once (TEAM__PLUGIN_DIR . 'includes/class-team-admin.php');
+	require_once (TEAM_PLUGIN_DIR . 'includes/class-team-admin.php');
 
 	$post_type_admin = new FWDD_Team_Post_Type_Admin( $post_type_registrations );
 	$post_type_admin->init();
 
 	// Load the help tabs.
-	require_once (TEAM__PLUGIN_DIR . 'includes/team-help-tabs.php');
+	require_once (TEAM_PLUGIN_DIR . 'includes/team-help-tabs.php');
 }
 // Load our functions file.
-require_once(TEAM__PLUGIN_DIR . 'includes/team-functions.php');
+require_once(TEAM_PLUGIN_DIR . 'includes/team-functions.php');
 // Load the Widget
-require_once(TEAM__PLUGIN_DIR . 'includes/class-team-widget.php');
+require_once(TEAM_PLUGIN_DIR . 'includes/class-team-widget.php');
