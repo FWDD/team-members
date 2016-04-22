@@ -11,7 +11,7 @@
  *
  * @package Team_Post_Type
  */
-class Team_Post_Type_Admin {
+class FWDD_Team_Post_Type_Admin {
 
 	protected $registration_handler;
 
@@ -48,7 +48,7 @@ class Team_Post_Type_Admin {
 	 * @return array Amended columns.
 	 */
 	public function add_custom_columns( $columns ) {
-		$column_thumbnail = array( 'thumbnail' => __( 'Image', 'rivalmind-team' ), 'menu-order' => __('Order', 'rivalmind-team') );
+		$column_thumbnail = array( 'thumbnail' => __( 'Image', 'fwdd-team' ), 'menu-order' => __('Order', 'fwdd-team') );
 		return array_slice( $columns, 0, 2, true ) + $column_thumbnail + array_slice( $columns, 1, null, true );
 	}
 

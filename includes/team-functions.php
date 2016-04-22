@@ -29,12 +29,11 @@ if ( ! function_exists( 'get_team' ) ):
 		}
 
 		$query = new WP_Query( $args );
-		//TODO Make sure we have an avatar or use the image supplied by the user.
 		$team = '';
 		// Create a counter for the data-target attribute on each team member link
 		$count = 0;
 		if ( $query->have_posts() ) {
-			$team .= '<div class="RivalMind-team"><ul class="team">';
+			$team .= '<div class="fwdd-team"><ul class="team">';
 			while ( $query->have_posts() ) : $query->the_post();
 				$post_id = get_the_ID();
 				$meta    = get_post_custom( $post_id );
@@ -107,5 +106,5 @@ if ( ! function_exists( 'team_shortcode' ) ):
 		return get_team($a['posts_per_page'], $a['category'], $a['team_id']);
 	}
 endif;
-// TODO should be called on init hook
+
 add_shortcode( 'team', 'team_shortcode' );

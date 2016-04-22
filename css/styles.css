@@ -1,4 +1,4 @@
-.RivalMind-team .team {
+.fwdd-team .team {
     display: block;
     margin: 0 -10px 0 -10px;
     padding: 0;
@@ -6,47 +6,47 @@
     text-align: center;
 }
 
-.RivalMind-team:after {
+.fwdd-team:after {
     clear: both;
 }
 
-.RivalMind-team .team > *{
+.fwdd-team .team > *{
     vertical-align: top;
 }
 
-.RivalMind-team a{
+.fwdd-team a{
     text-decoration: none;
 }
 
-.RivalMind-team .team-name{
+.fwdd-team .team-name{
     margin: 20px 0 0;
 }
 
-.RivalMind-team .job-title{
+.fwdd-team .job-title{
     display: block;
 }
-.RivalMind-team .team li {
+.fwdd-team .team li {
     display: inline-block;
     padding: 10px;
     height: auto;
 }
 
-.RivalMind-team img {
+.fwdd-team img {
     display: block;
     margin: 0 auto;
     border-radius: 50%;
 }
 
-.RivalMind-team .team-links{
+.fwdd-team .team-links{
     margin:0;
     padding:0;
 }
-.RivalMind-team .team-links a{
+.fwdd-team .team-links a{
     position:relative;
     display: inline-block;
 }
 
-.RivalMind-team .team-links a:before{
+.fwdd-team .team-links a:before{
     content: '\f0a3';
     vertical-align: top;
     display: inline-block;
@@ -57,50 +57,50 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.RivalMind-team .team-links a[href*="wordpress.org"]::before,
-.RivalMind-team .team-links a[href*="wordpress.com"]::before {
+.fwdd-team .team-links a[href*="wordpress.org"]::before,
+.fwdd-team .team-links a[href*="wordpress.com"]::before {
     content: '\f19a';
 }
-.RivalMind-team .team-links a[href*="facebook.com"]::before {
+.fwdd-team .team-links a[href*="facebook.com"]::before {
     content: '\f09a';
 }
-.RivalMind-team .team-links a[href*="twitter.com"]::before {
+.fwdd-team .team-links a[href*="twitter.com"]::before {
     content: '\f099';
 }
-.RivalMind-team .team-links a[href*="dribbble.com"]::before {
+.fwdd-team .team-links a[href*="dribbble.com"]::before {
     content: '\f17d';
 }
-.RivalMind-team .team-links a[href*="plus.google.com"]::before {
+.fwdd-team .team-links a[href*="plus.google.com"]::before {
     content: '\f0d5';
 }
-.RivalMind-team .team-links a[href*="pinterest.com"]::before {
+.fwdd-team .team-links a[href*="pinterest.com"]::before {
     content: '\f231';
 }
-.RivalMind-team .team-links a[href*="github.com"]::before {
+.fwdd-team .team-links a[href*="github.com"]::before {
     content: '\f113';
 }
-.RivalMind-team .team-links a[href*="tumblr.com"]::before {
+.fwdd-team .team-links a[href*="tumblr.com"]::before {
     content: '\f173';
 }
-.RivalMind-team .team-links a[href*="youtube.com"]::before {
+.fwdd-team .team-links a[href*="youtube.com"]::before {
     content: '\f167';
 }
-.RivalMind-team .team-links a[href*="flickr.com"]::before {
+.fwdd-team .team-links a[href*="flickr.com"]::before {
     content: '\f16e';
 }
-.RivalMind-team .team-links a[href*="vimeo.com"]::before {
+.fwdd-team .team-links a[href*="vimeo.com"]::before {
     content: '\f27d';
 }
-.RivalMind-team .team-links a[href*="instagram.com"]::before {
+.fwdd-team .team-links a[href*="instagram.com"]::before {
     content: '\f16d';
 }
-.RivalMind-team .team-links a[href*="codepen.io"]::before {
+.fwdd-team .team-links a[href*="codepen.io"]::before {
     content: '\f1cb';
 }
-.RivalMind-team .team-links a[href*="linkedin.com"]::before {
+.fwdd-team .team-links a[href*="linkedin.com"]::before {
     content: '\f0e1';
 }
-.RivalMind-team .team-links a[href*="mailto"]::before {
+.fwdd-team .team-links a[href*="mailto"]::before {
     content: '\f003';
 }
 

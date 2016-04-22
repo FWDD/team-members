@@ -11,7 +11,7 @@
  *
  * @package Team_Post_Type
  */
-class Team_Post_Type_Metaboxes {
+class FWDD_Team_Post_Type_Metaboxes {
 
 	public function init() {
 		add_action( 'add_meta_boxes', array( $this, 'team_meta_boxes' ) );
@@ -54,18 +54,18 @@ class Team_Post_Type_Metaboxes {
 
 			<tr>
 				<td class="team_meta_box_td" colspan="2">
-					<label for="profile_title"><?php _e( 'Job Title', 'rivalmind-team' ); ?>
+					<label for="profile_title"><?php _e( 'Job Title', 'fwdd-team' ); ?>
 					</label>
 				</td>
 				<td colspan="4">
 					<input type="text" name="profile_title" class="regular-text" value="<?php echo $title; ?>">
-					<p class="description"><?php _e( 'E.g. CEO, Sales Lead, Designer', 'rivalmind-team' ); ?></p>
+					<p class="description"><?php _e( 'E.g. CEO, Sales Lead, Designer', 'fwdd-team' ); ?></p>
 				</td>
 			</tr>
 
 			<tr>
 				<td class="team_meta_box_td" colspan="2">
-					<label for="profile_linkedin"><?php _e( 'LinkedIn URL', 'rivalmind-team' ); ?>
+					<label for="profile_linkedin"><?php _e( 'LinkedIn URL', 'fwdd-team' ); ?>
 					</label>
 				</td>
 				<td colspan="4">
@@ -75,7 +75,7 @@ class Team_Post_Type_Metaboxes {
 
 			<tr>
 				<td class="team_meta_box_td" colspan="2">
-					<label for="profile_twitter"><?php _e( 'Twitter URL', 'rivalmind-team' ); ?>
+					<label for="profile_twitter"><?php _e( 'Twitter URL', 'fwdd-team' ); ?>
 					</label>
 				</td>
 				<td colspan="4">
@@ -85,7 +85,7 @@ class Team_Post_Type_Metaboxes {
 
 			<tr>
 				<td class="team_meta_box_td" colspan="2">
-					<label for="profile_facebook"><?php _e( 'Facebook URL', 'rivalmind-team' ); ?>
+					<label for="profile_facebook"><?php _e( 'Facebook URL', 'fwdd-team' ); ?>
 					</label>
 				</td>
 				<td colspan="4">
@@ -95,7 +95,7 @@ class Team_Post_Type_Metaboxes {
 
 			<tr>
 				<td class="team_meta_box_td" colspan="2">
-					<label for="profile_facebook"><?php _e( 'Email Address', 'rivalmind-team' ); ?>
+					<label for="profile_facebook"><?php _e( 'Email Address', 'fwdd-team' ); ?>
 					</label>
 				</td>
 				<td colspan="4">

@@ -11,7 +11,7 @@
  *
  * @package Team_Post_Type
  */
-class Team_Post_Type_Registrations {
+class FWDD_Team_Post_Type_Registrations {
 
 	public $post_type = 'team';
 
@@ -25,8 +25,8 @@ class Team_Post_Type_Registrations {
 	/**
 	 * Initiate registrations of post type and taxonomies.
 	 *
-	 * @uses Team_Post_Type_Registrations::register_post_type()
-	 * @uses Team_Post_Type_Registrations::register_taxonomy_category()
+	 * @uses FWDD_Team_Post_Type_Registrations::register_post_type()
+	 * @uses FWDD_Team_Post_Type_Registrations::register_taxonomy_category()
 	 */
 	public function register() {
 		$this->register_post_type();
@@ -40,16 +40,16 @@ class Team_Post_Type_Registrations {
 	 */
 	protected function register_post_type() {
 		$labels = array(
-			'name'               => __( 'Team', 'rivalmind-team' ),
-			'singular_name'      => __( 'Team Member', 'rivalmind-team' ),
-			'add_new'            => __( 'Add Profile', 'rivalmind-team' ),
-			'add_new_item'       => __( 'Add Profile', 'rivalmind-team' ),
-			'edit_item'          => __( 'Edit Profile', 'rivalmind-team' ),
-			'new_item'           => __( 'New Team Member', 'rivalmind-team' ),
-			'view_item'          => __( 'View Profile', 'rivalmind-team' ),
-			'search_items'       => __( 'Search Team', 'rivalmind-team' ),
-			'not_found'          => __( 'No profiles found', 'rivalmind-team' ),
-			'not_found_in_trash' => __( 'No profiles in the trash', 'rivalmind-team' ),
+			'name'               => __( 'Team', 'fwdd-team' ),
+			'singular_name'      => __( 'Team Member', 'fwdd-team' ),
+			'add_new'            => __( 'Add Profile', 'fwdd-team' ),
+			'add_new_item'       => __( 'Add Profile', 'fwdd-team' ),
+			'edit_item'          => __( 'Edit Profile', 'fwdd-team' ),
+			'new_item'           => __( 'New Team Member', 'fwdd-team' ),
+			'view_item'          => __( 'View Profile', 'fwdd-team' ),
+			'search_items'       => __( 'Search Team', 'fwdd-team' ),
+			'not_found'          => __( 'No profiles found', 'fwdd-team' ),
+			'not_found_in_trash' => __( 'No profiles in the trash', 'fwdd-team' ),
 		);
 
 		$supports = array(
@@ -84,22 +84,22 @@ class Team_Post_Type_Registrations {
 	 */
 	protected function register_taxonomy_category() {
 		$labels = array(
-			'name'                       => __( 'Team Categories', 'rivalmind-team' ),
-			'singular_name'              => __( 'Team Category', 'rivalmind-team' ),
-			'menu_name'                  => __( 'Team Categories', 'rivalmind-team' ),
-			'edit_item'                  => __( 'Edit Team Category', 'rivalmind-team' ),
-			'update_item'                => __( 'Update Team Category', 'rivalmind-team' ),
-			'add_new_item'               => __( 'Add New Team Category', 'rivalmind-team' ),
-			'new_item_name'              => __( 'New Team Category Name', 'rivalmind-team' ),
-			'parent_item'                => __( 'Parent Team Category', 'rivalmind-team' ),
-			'parent_item_colon'          => __( 'Parent Team Category:', 'rivalmind-team' ),
-			'all_items'                  => __( 'All Team Categories', 'rivalmind-team' ),
-			'search_items'               => __( 'Search Team Categories', 'rivalmind-team' ),
-			'popular_items'              => __( 'Popular Team Categories', 'rivalmind-team' ),
-			'separate_items_with_commas' => __( 'Separate team categories with commas', 'rivalmind-team' ),
-			'add_or_remove_items'        => __( 'Add or remove team categories', 'rivalmind-team' ),
-			'choose_from_most_used'      => __( 'Choose from the most used team categories', 'rivalmind-team' ),
-			'not_found'                  => __( 'No team categories found.', 'rivalmind-team' ),
+			'name'                       => __( 'Team Categories', 'fwdd-team' ),
+			'singular_name'              => __( 'Team Category', 'fwdd-team' ),
+			'menu_name'                  => __( 'Team Categories', 'fwdd-team' ),
+			'edit_item'                  => __( 'Edit Team Category', 'fwdd-team' ),
+			'update_item'                => __( 'Update Team Category', 'fwdd-team' ),
+			'add_new_item'               => __( 'Add New Team Category', 'fwdd-team' ),
+			'new_item_name'              => __( 'New Team Category Name', 'fwdd-team' ),
+			'parent_item'                => __( 'Parent Team Category', 'fwdd-team' ),
+			'parent_item_colon'          => __( 'Parent Team Category:', 'fwdd-team' ),
+			'all_items'                  => __( 'All Team Categories', 'fwdd-team' ),
+			'search_items'               => __( 'Search Team Categories', 'fwdd-team' ),
+			'popular_items'              => __( 'Popular Team Categories', 'fwdd-team' ),
+			'separate_items_with_commas' => __( 'Separate team categories with commas', 'fwdd-team' ),
+			'add_or_remove_items'        => __( 'Add or remove team categories', 'fwdd-team' ),
+			'choose_from_most_used'      => __( 'Choose from the most used team categories', 'fwdd-team' ),
+			'not_found'                  => __( 'No team categories found.', 'fwdd-team' ),
 		);
 
 		$args = array(

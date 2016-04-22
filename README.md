@@ -11,7 +11,7 @@ This plugin includes a couple common features that are used with custom post typ
 * Registers a few metaboxes (Title, Twitter, Facebook, LinkedIn)
 * Adds the featured image to the admin column display
 * Adds the post count to the admin dashboard
-* Adds RivalMind Team widget
+* Adds FWDD Team widget
 
 ### Usage
 

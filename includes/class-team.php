@@ -1,8 +1,8 @@
 <?php
 /**
- * Team Post Type
+ * FWDD Team Post Type
  *
- * @package   Team_Post_Type
+ * @package   FWDD_Team_Post_Type
  * @license   GPL-2.0+
  */
 
@@ -11,7 +11,7 @@
  *
  * @since 0.1.0
  */
-class Team_Post_Type {
+class FWDD_Team_Post_Type {
 
 	/**
 	 * Plugin version, used for cache-busting of style and script file references.
@@ -32,7 +32,7 @@ class Team_Post_Type {
 	 *
 	 * @var string
 	 */
-	const PLUGIN_SLUG = 'rivalmind-team';
+	const PLUGIN_SLUG = 'fwdd-team';
 
 	protected $registration_handler;
 
