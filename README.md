@@ -37,6 +37,10 @@ Where $posts_per_page is the number of profiles to show, $cat is the category id
 
 * WordPress 3.8 or higher
 
+## License
+
+[GPL-2.0+](http://www.gnu.org/licenses/gpl-2.0.txt)
+
 ### Credits
 
 Based on the terrific boilerplate by [Devin Price](http://www.wptheming.com/).  The "Dashboard Glancer" class and much re-used code from the Portfolio Post Type plugin by [Gary Jones](http://gamajo.com/).
